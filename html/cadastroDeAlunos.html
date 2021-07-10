@@ -52,6 +52,14 @@
     <h2 class="text-center">Consultar Alunos Cadastrados</h2>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Clique aqui para consultar</button>    
         <p></p>
+      
+  
+
+      <hr>
+
+    <h2 class="text-center">Alterar Dados do Aluno</h2>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" data-whatever="@mdo">Clique aqui para Alterar</button>    
+        <p></p>
         </div>
     </div>
     
@@ -84,10 +92,50 @@
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             <button id="btConsultaAluno" type="button" class="btn btn-primary">Procurar</button>
           </div>
+          <label for="recipient-name" id="outDadosDaAluno"></label>
           <div class="container">
-            <label for="recipient-name" id="outDadosDaAluno"></label>
             <h5 id="outConsultarAluno"></h5>
             <h5 id="outConsultarResponsavel"></h5>
+            <h5 id="outConsultarCpf"></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Alterar Aluno</h5>
+            <button type="button" class="close btn btn-secondary" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Alterar nome do Aluno: </label>
+                <input type="search" class="form-control" id="inAlterarAluno">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Alterar nome do Resposnsável: </label>
+                <input type="search" class="form-control" id="inAlterarResponsabel">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Alterar CPF: </label>
+                <input type="search" class="form-control" id="inAlterarCpf">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button id="btAlterarAluno" type="button" class="btn btn-primary">Alterar</button>
+          </div>
+          <label for="recipient-name" id="outDadosDaAluno"></label>
+          <div class="container">
+            <h5 id="outAlterarAluno"></h5>
+            <h5 id="outAlterarResponsavel"></h5>
+            <h5 id="outAlterarCpf"></h5>
           </div>
         </div>
       </div>
