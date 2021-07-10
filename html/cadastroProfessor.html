@@ -14,51 +14,52 @@
     <div class="container form-group col-8">
         <h1>Cadastro de Professor</h1>
         <label for="recipient-name" class="col-form-label">Nome do Professor: </label>
-        <input class="form-control" type="text" id="recipient-name">
+        <input class="form-control" type="text" id="inProfessor">
 
         <label for="recipient-name" class="col-form-label">Número da Matricula: </label>
-        <input class="form-control" type="text" id="recipient-name">
+        <input class="form-control" type="text" id="inMatricula">
 
         <label for="recipient-name" class="col-form-label">Diploma de Formação Exigido para a Função: </label>
-        <input class="form-control" type="file" id="recipient-name"> 
+        <input class="form-control" type="file" id="inDiploma"> 
         
         <label for="recipient-name" class="col-form-label">Numero do Pis: </label>
-        <input class="form-control" type="text" id="recipient-name">
+        <input class="form-control" type="text" id="inPis">
 
         <div class="col-12-lg">
             <label for="recipient-name" class="col-form-label">Numero do Titulo de Eleitor: 
-                <input class="form-control " type="number" placeholder="Número do Título"> 
+                <input class="form-control " type="number" placeholder="Número do Título" id="inTitulo"> 
             </label>
             <label for="recipient-name" class="col-form-label">Zona: 
-                <input class="form-control" type="number" placeholder="Zona Eleitoral"> 
+                <input class="form-control" type="number" placeholder="Zona Eleitoral" id="inZona"> 
             </label>
                 <label for="recipient-name" class="col-form-label">Sessão: 
-            <input class="form-control" type="number" placeholder="Sessão Eleitoral">
+            <input class="form-control" type="number" placeholder="Sessão Eleitoral" id="inSessao">
             </label>
         </div>
 
         <label for="recipient-name" class="col-form-label">Certidão de Casamento/Nascimento: </label>
-        <input class="form-control" type="file">
+        <input class="form-control" type="file" id="inCertidaoProfessor">
 
         <label for="recipient-name" class="col-form-label">Email: </label>
-        <input class="form-control" type="email">
+        <input class="form-control" type="email" id="inEmailProfessor">
 
-        <label for="recipient-name" class="col-form-label">Telefone: </label>
+        <label for="recipient-name" class="col-form-label" id="inTelefoneProfessor">Telefone: </label>
         <input class="form-control" type="tel">
 
         <div class="col-12-lg">
             <label for="recipient-name" class="col-form-label">Banco: 
-                <input class="form-control" type="number" placeholder="Número do Banco"> 
+                <input class="form-control" type="number" placeholder="Número do Banco" id="inBanco"> 
             </label>
             <label for="recipient-name" class="col-form-label">Agência: 
-                <input class="form-control" type="number" placeholder="Agência: "> 
+                <input class="form-control" type="number" placeholder="Agência" id="inAgencia"> 
             </label>
             <label for="recipient-name" class="col-form-label">Conta: 
-                <input class="form-control" type="number" placeholder="Conta">
+                <input class="form-control" type="number" placeholder="Conta" id="inConta">
             </label>
         </div>
         <div class="text-center">
-            <input type="submit" value="Cadastrar Professor" class="btn btn-primary" > 
+            <input type="submit" value="Cadastrar Professor" class="btn btn-primary" id="btCadastrarProfessor"> 
+            <pre id="outProfessorCadastrado"></pre>
         </div>
         <p></p>
     <hr>
@@ -80,31 +81,33 @@
               <form>
                 <div class="form-group">
                   <label for="recipient-name" class="col-form-label">Buscar pelo nome do Professor: </label>
-                  <input type="search" class="form-control" id="recipient-name">
+                  <input type="search" class="form-control" id="inConsultaProfessor">
                 </div>
                 <div class="form-group">
                   <label for="recipient-name" class="col-form-label">Buscar pelo numero de Matricula: </label>
-                  <input type="search" class="form-control" id="recipient-name">
+                  <input type="search" class="form-control" id="inConsultaMatricula">
                 </div>
                 <div class="form-group">
                   <label for="recipient-name" class="col-form-label">Buscar pelo Pis: </label>
-                  <input type="search" class="form-control" id="recipient-name">
-                </div>
-                <div class="form-group">
-                  <label for="message-text" class="col-form-label">Message:</label>
-                  <textarea class="form-control" id="message-text"></textarea>
+                  <input type="search" class="form-control" id="inConsultaPis">
                 </div>
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary">Procurar</button>
+              <button type="button" class="btn btn-primary" id="btConsultaProfessor">Procurar</button>
+            </div>
+            <div class="container">
+              <label for="recipient-name" id="outDadosDoProfessor"></label>
+              <h5 id="outConsultarProfessor"></h5>
+              <h5 id="outConsultarMatricula"></h5>
             </div>
           </div>
         </div>
       </div>
     </div>
     <script src="../js/cadastroDeAlunos.js"></script>
+    <script src="../js/professorCadastrado.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
